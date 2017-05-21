@@ -2,6 +2,10 @@ machine:
   services:
     - docker
 
+general:
+  artifacts:
+    - dist
+
 test:
   override:
     - echo 'no tests'
@@ -9,4 +13,4 @@ test:
 compile:
   override:
   - docker build -t ci -f Dockerfile.ci .
-  - docker run --rm -it -v `pwd`:/opt/app ci
+  - docker run -v `pwd`:/opt/app ci
