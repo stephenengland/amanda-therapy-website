@@ -14,3 +14,9 @@ compile:
   override:
   - docker build -t ci -f Dockerfile.ci .
   - docker run -v `pwd`:/opt/app ci
+
+deployment:
+  prod:
+    branch: master
+    commands:
+      - aws s3 sync dist/ s3://amanda-therapy-website/www/ --delete
