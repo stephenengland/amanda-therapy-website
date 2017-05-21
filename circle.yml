@@ -1,0 +1,8 @@
+test:
+  override:
+    - echo 'no tests'
+
+compile:
+  override:
+  - docker build -t ci -f Dockerfile.ci .
+  - docker run --rm -it -v `pwd`:/opt/app ci

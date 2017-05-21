@@ -1,0 +1,7 @@
+FROM node:7.10.0-slim
+
+RUN npm install -g gulp
+
+WORKDIR /opt/app
+
+CMD ["gulp"]

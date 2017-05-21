@@ -1,0 +1,23 @@
+{
+  "name": "amanda-therapy-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thealah/amanda-therapy-website.git"
+  },
+  "author": "Stephen England",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thealah/amanda-therapy-website/issues"
+  },
+  "homepage": "https://github.com/thealah/amanda-therapy-website#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-htmlmin": "^3.0.0"
+  }
+}
