@@ -4,4 +4,4 @@ RUN npm install -g gulp
 
 WORKDIR /opt/app
 
-CMD ["gulp"]
+CMD ["/opt/app/docker-build.sh"]
