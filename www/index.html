@@ -5,33 +5,156 @@
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  
+  <style>
+    .banner {
+      background-color: rgba(0, 0, 255, 0.41);
+      padding: 2em;
+      border-bottom: 1px solid purple;
+    }
+    .banner h1 {
+      display: inline;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 1em;
+    }
+    .banner .nav-tabs {
+      margin-bottom: -2em;
+      margin-left: 3em;
+      margin-top: 1em;
+      border-bottom: none;
+    }
+    .banner .nav-tabs a:visited, .banner .nav-tabs a:link, .banner .nav-tabs a:hover, .banner .nav-tabs a:active {
+      color: white;
+    }
+    .banner .nav-tabs a.active {
+      color: black;
+    }
+    .tab-content-panel {
+      padding: 1em;
+    }
+    .tab-content-image {
+      padding: 0;
+    }
+    .logo {
+      max-height: 225px;
+    }
+  </style>
 </head>
 
 <body>
-
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col">
-        <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">About the Therapist</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-        </ul>
+      <div class="col banner">
+        <div class="row">
+        <img alt="Logo" src="img/logo.png" class="img-fluid logo" />
+        <h1 class="display-1 align-middle">Out &amp; About Speech</h1>
+        </div>
+        <div class="row">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home" role="tab" data-toggle="tab">Why Choose Out &amp; About?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services" role="tab" data-toggle="tab">Services Available</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#meet" role="tab" data-toggle="tab">Meet The Therapist</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" role="tab" data-toggle="tab">Contact Us</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="row">
       <div class="col">
-        Test
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+              <div class="row">
+                <div class="col tab-content-panel">
+                  <h2>Why Choose Out & About?</h2>
+                  <p class="lead">
+                    Out &amp; About Speech Therapy services are provided in your own home or in another designated location in the community such as a local park or playground. This approach may be beneficial for several reasons: 
+                  </p>
+                  <ul>
+                    <li>
+                      Your home and community are where your child has the greatest opportunity for learning. Whether your child is working on articulation, language, social skills, or listening, the therapist will take advantage of the environment around them to find the most functional skills and targets that can be practiced every day.
+                    </li>
+                    <li>
+                      Consistent visits help children to develop their skills more efficiently. Home visits with flexible scheduling allow you to keep up with therapy sessions more easily.
+                    </li>
+                    <li>
+                      Make every moment count. With therapy that involves you, the child&apos;s caregiver, learning continues even when the therapist leaves. 
+                    </li>
+                  </ul>
+                </div>
+                <div class="col tab-content-image">
+                  <img src="img/visits/reading-outside.jpg" alt="Amanda and a patient" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="services">
+              <div class="row">
+                <div class="col tab-content-panel">
+                  <h2>Services Available</h2>
+                  <ul>
+                    <li>Articulation Therapy - providing activities and training to reduce sound errors in speech</li>
+                    <li>Language Therapy - engaging child in language activities and modeling appropriate targets</li>
+                    <li>Social Skills Therapy - improving social/pragmatic abilities through play (individual or group)</li>
+                    <li>Aural Rehabilitation Therapy - improving listening skills for children and adults</li>
+                    <li>Auditory Processing Therapy - strategies and training to improve auditory processing abilities</li>
+                    <li>Individual & Group Therapy - service delivery is flexible depending on the needs of your child</li>
+                  </ul>
+                  <p>
+                    In addition, therapy will engage and educate caregivers during each session. The therapist will collaborate and connect with your child&apos;s teachers or other specialists about therapeutic goals and progress, as desired.
+                 </p>
+                </div>
+                <div class="col tab-content-image">
+                  <img src="img/visits/game-inside.jpg" alt="Amanda and a patient" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="meet">
+              <div class="row">
+                <div class="col tab-content-panel">
+                  <h2>Meet The Therapist</h2>
+                  <p>
+                    Amanda England has experience serving preschool and school-age clients, between 1 and 18 years of age. She served as a Speech-Language Pathologist for Plano Independent School District for two years, and in a private practice located in Dallas for two years. Amanda opened her own practice in order to provide a unique solution for parents and families to receive high-quality services in their own homes. She is committed to this therapy model, as it allows the child and caregivers to engage in sessions and readily carry over therapy techniques at home.
+                  </p>
+                  <p>
+                    Amanda graduated from UT Dallas with a Bachelor of Science in Speech-Language Pathology and Audiology. On completing her undergraduate education she received the Dean&apos;s Award for Excellence and was granted Magna Cum Laude honors. She returned to UT Dallas for her Master of Science in Communication Disorders, graduating with a 4.0 GPA. 
+                  </p>
+                  <p class="lead">
+                    Amanda is licensed to practice Speech-Language Pathology in the state of Texas, and holds a Certificate of Clinical Competence through the American Speech-Language-Hearing Association. 
+                  </p>
+                </div>
+                <div class="col tab-content-image">
+                  <img src="img/visits/speech-1.jpg" alt="Amanda and a patient" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="contact">
+              <div class="row">
+                <div class="col tab-content-panel">
+                  <address>
+                    <strong>Amanda England, M.S. CCC-SLP</strong> <br>
+                    amandaenglandslp@gmail.com <br>
+                    469-708-7115 <br>
+                    P.O. Box 864201 <br>
+                    Plano, Texas 75086
+                  </address>
+                </div>
+                <div class="col tab-content-image">
+                  <img src="img/visits/game-inside-2.jpg" alt="Amanda and a patient" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
   </div>
-
 </body>
 
 </html>
