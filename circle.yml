@@ -24,4 +24,5 @@ deployment:
     branch: master
     commands:
       - aws s3 sync dist/ s3://amanda-therapy-website/www/ --delete
+      - aws configure set preview.cloudfront true
       - aws cloudfront create-invalidation --distribution-id E2L2WKPDSN8BF3 --paths /index.html
