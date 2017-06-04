@@ -13,9 +13,14 @@
  
   <style>
     .banner {
-      background-color: rgba(0, 0, 255, 0.41);
+      background: rgba(0, 0, 255, 0.41);
+      background: -webkit-linear-gradient(rgba(0, 0, 255, 0.41), rgba(0, 0, 255, 0.55)); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(rgba(0, 0, 255, 0.41), rgba(0, 0, 255, 0.55)); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(rgba(0, 0, 255, 0.41), rgba(0, 0, 255, 0.55)); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(rgba(0, 0, 255, 0.41), rgba(0, 0, 255, 0.55)); /* Standard syntax */
+      //rgba(0, 255, 158, 0.43);
       padding: 2em;
-      border-bottom: 1px solid purple;
+      border-bottom: 1px solid rgba(0, 0, 255, 0.60);
     }
     .banner h1 {
       display: inline;
@@ -40,6 +45,11 @@
     }
     .tab-content-image {
       padding: 0;
+    }
+    .contact-us-info {
+      text-align: center;
+      font-size: 1.35em;
+      margin-top: 1em;
     }
     .logo {
       max-height: 225px;
@@ -79,7 +89,7 @@
             <div role="tabpanel" class="tab-pane active" id="home">
               <div class="row">
                 <div class="col-xs-12 col-lg-6 tab-content-panel">
-                  <h2>Why Choose Out & About?</h2>
+                  <h2>Why Choose Out &amp; About?</h2>
                   <p class="lead">
                     Out &amp; About Speech Therapy services are provided in your own home or in another designated location in the community such as a local park or playground. This approach may be beneficial for several reasons: 
                   </p>
@@ -110,7 +120,7 @@
                     <li>Social Skills Therapy - improving social/pragmatic abilities through play (individual or group)</li>
                     <li>Aural Rehabilitation Therapy - improving listening skills for children and adults</li>
                     <li>Auditory Processing Therapy - strategies and training to improve auditory processing abilities</li>
-                    <li>Individual & Group Therapy - service delivery is flexible depending on the needs of your child</li>
+                    <li>Individual &amp; Group Therapy - service delivery is flexible depending on the needs of your child</li>
                   </ul>
                   <p>
                     In addition, therapy will engage and educate caregivers during each session. The therapist will collaborate and connect with your child&apos;s teachers or other specialists about therapeutic goals and progress, as desired.
@@ -143,7 +153,10 @@
             <div role="tabpanel" class="tab-pane fade" id="contact">
               <div class="row">
                 <div class="col-xs-12 col-lg-6 tab-content-panel">
-                  <address>
+                  <p class="lead">
+                    Contact us to find out more about whether Out &amp; About Speech Therapy is the right fit for your family. After a free phone consultation with the caregiver, the therapist will work with you to help determine the best plan for your child's growth and learning.  
+                  </p>
+                  <address class="contact-us-info">
                     <strong>Amanda England, M.S. CCC-SLP</strong> <br>
                     amandaenglandslp@gmail.com <br>
                     469-708-7115 <br>
