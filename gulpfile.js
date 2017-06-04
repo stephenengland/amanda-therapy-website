@@ -10,8 +10,12 @@ gulp.task('minify', function() {
 });
 
 gulp.task('copy', function () {
-    gulp.src('www/img/**/*')
+    return gulp.src('www/img/**/*')
         .pipe(gulp.dest('dist/img'));
+});
+gulp.task('copy-icons', function () {
+    return gulp.src(['www/*.png', 'www/*.ico'])
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function () {
@@ -20,4 +24,4 @@ gulp.task('watch', function () {
     }));
 });
 
-gulp.task('default', ['minify', 'copy']);
+gulp.task('default', ['minify', 'copy', 'copy-icons']);
