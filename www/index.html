@@ -15,6 +15,9 @@
   <link rel="icon" type="image/png" href="favicon-96.png" sizes="96x96">
 
   <style>
+    body {
+      min-width: 480px;
+    }
     .banner {
       background: rgba(0, 0, 255, 0.41);
       background: -webkit-linear-gradient(rgba(0, 0, 255, 0.41), rgba(0, 0, 255, 0.55)); /* For Safari 5.1 to 6.0 */
@@ -57,6 +60,31 @@
     .logo {
       max-height: 225px;
     }
+    @media (max-width: 590px) {
+      .banner .nav-tabs {
+        margin-left: 0;
+      }
+    }
+    @media (max-width: 1250px) {
+      .main-header {
+        font-size: 5rem;
+      }
+    }
+    @media (max-width: 1100px) {
+      .main-header {
+        font-size: 4rem;
+      }
+    }
+    @media (max-width: 930px) {
+      .main-header {
+        font-size: 3.8rem;
+      }
+    }
+    @media (max-width: 900px) {
+      .main-header {
+        font-size: 3rem;
+      }
+    }
   </style>
 </head>
 
@@ -65,19 +93,25 @@
     <div class="row">
       <div class="col banner">
         <div class="row">
-        <img alt="Logo" src="img/logo.png" class="img-fluid logo" />
-        <h1 class="display-1 align-middle">Out &amp; About Speech</h1>
+          <div class="col">
+            <img alt="Logo" src="img/logo.png" class="img-fluid logo hidden-sm-down" />
+            <h1 class="display-1 align-middle main-header">Out &amp; About Speech</h1>
+          </div>
         </div>
         <div class="row">
           <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
-              <a class="nav-link active" href="#home" role="tab" data-toggle="tab">Why Choose Out &amp; About?</a>
+              <a class="nav-link active" href="#home" role="tab" data-toggle="tab">
+                Why <span class="hidden-sm-down">Choose Out &amp; About?</span><span class="hidden-md-up">Us?</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#services" role="tab" data-toggle="tab">Services Available</a>
+              <a class="nav-link" href="#services" role="tab" data-toggle="tab">
+                Services <span class="hidden-sm-down">Available</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#meet" role="tab" data-toggle="tab">Meet The Therapist</a>
+              <a class="nav-link" href="#meet" role="tab" data-toggle="tab">Meet <span class="hidden-sm-down">The Therapist</span><span class="hidden-md-up">Amanda</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact" role="tab" data-toggle="tab">Contact Us</a>
