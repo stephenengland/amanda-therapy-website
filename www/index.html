@@ -18,12 +18,41 @@
     body {
       min-width: 480px;
     }
+    body > .container-fluid {
+      padding-bottom: 40px;
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      background: #9696ff;
+      background: -webkit-linear-gradient(#9696ff, #7373ff); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#9696ff, #7373ff); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#9696ff, #7373ff); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#9696ff, #7373ff); /* Standard syntax */
+      padding-left: 1em;
+      padding-right: 1em;
+      color: white;
+    }
+    footer .telephone {
+      float: left;
+    }
+    footer .email {
+      float: right;
+    }
+    footer a:visited, footer a:link,
+    footer a:active, footer {
+      color: white;
+      text-decoration: underline;
+    }
     .banner {
-      background: rgba(0, 0, 255, 0.41);
-      background: -webkit-linear-gradient(rgba(0, 0, 255, 0.41), rgba(0, 0, 255, 0.55)); /* For Safari 5.1 to 6.0 */
-      background: -o-linear-gradient(rgba(0, 0, 255, 0.41), rgba(0, 0, 255, 0.55)); /* For Opera 11.1 to 12.0 */
-      background: -moz-linear-gradient(rgba(0, 0, 255, 0.41), rgba(0, 0, 255, 0.55)); /* For Firefox 3.6 to 15 */
-      background: linear-gradient(rgba(0, 0, 255, 0.41), rgba(0, 0, 255, 0.55)); /* Standard syntax */
+      background: #9696ff;
+      background: -webkit-linear-gradient(#9696ff, #7373ff); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#9696ff, #7373ff); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#9696ff, #7373ff); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#9696ff, #7373ff); /* Standard syntax */
       //rgba(0, 255, 158, 0.43);
       padding: 2em;
       border-bottom: 1px solid rgba(0, 0, 255, 0.60);
@@ -195,8 +224,8 @@
                   </p>
                   <address class="contact-us-info">
                     <strong>Amanda England, M.S. CCC-SLP</strong> <br>
-                    amandaenglandslp@gmail.com <br>
-                    469-708-7115 <br>
+                    <a class="email" data-email="true"></a> <br>
+                    <a class="telephone" data-telephone="true"></a><br>
                     P.O. Box 864201 <br>
                     Plano, Texas 75086
                   </address>
@@ -210,6 +239,28 @@
       </div>
     </div>
   </div>
+  <footer>
+    <div class="telephone">
+      <span class="hidden-sm-down">Call us at: </span><a data-telephone="true"></a>
+    </div>
+    <div class="email">
+      <span class="hidden-sm-down">Email us at: </span><a data-email="true"></a>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      //Rudimentary prevention against bots that read phone numbers//emails
+      $("[data-telephone]").each(function () {
+        $(this).attr("href", "tel:+1-469-" + "708-" + "7" + "115");
+        $(this).text("469-7" + "08-7115");
+      });
+      $("[data-email]").each(function () {
+        $(this).attr("href", "mailto:amandaenglan" + "dslp@gmail.com");
+        $(this).text("amandaenglan" + "dslp@gmail.com");
+      });
+    });
+  </script>
 </body>
 
 </html>
