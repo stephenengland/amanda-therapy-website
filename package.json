@@ -15,11 +15,5 @@
   "bugs": {
     "url": "https://github.com/thealah/amanda-therapy-website/issues"
   },
-  "homepage": "https://github.com/thealah/amanda-therapy-website#readme",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-batch": "^1.0.5",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-watch": "^4.3.11"
-  }
+  "homepage": "https://github.com/thealah/amanda-therapy-website#readme"
 }
