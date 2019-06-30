@@ -7,20 +7,23 @@ jobs:
     steps:
       - checkout
       - run:
-        command: npm install --dev
+          name: npm install
+          command: npm install --dev
       - run:
-        command: npm install -g gulp
+          name: install gulp
+          command: npm install -g gulp
       - run:
-        command: gulp
+          name: build
+          command: gulp
       - run:
-        name: Copy files
-        command: aws s3 sync dist/ s3://amanda-therapy-website/www/ --delete
+          name: Copy files
+          command: aws s3 sync dist/ s3://amanda-therapy-website/www/ --delete
       - run:
-        name: Update cache header
-        command: aws s3 cp s3://amanda-therapy-website/www/ s3://amanda-therapy-website/www/ --exclude "*" --include "*.jpg" --include "*.png" --include "*.ico" --recursive --metadata-directive REPLACE --expires 2034-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
+          name: Update cache header
+          command: aws s3 cp s3://amanda-therapy-website/www/ s3://amanda-therapy-website/www/ --exclude "*" --include "*.jpg" --include "*.png" --include "*.ico" --recursive --metadata-directive REPLACE --expires 2034-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
       - run:
-        name: Set parameter
-        command: aws configure set preview.cloudfront true
+          name: Set parameter
+          command: aws configure set preview.cloudfront true
       - run:
-        name: Invalidate cache
-        command: aws cloudfront create-invalidation --distribution-id E2L2WKPDSN8BF3 --paths /index.html
+          name: Invalidate cache
+          command: aws cloudfront create-invalidation --distribution-id E2L2WKPDSN8BF3 --paths /index.html
